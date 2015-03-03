@@ -1,0 +1,25 @@
+<html>
+	<script src="jquery.js"></script>
+	<body id="">
+
+
+		<button name="aaa" value="clica aqui" id="aaa"></button>
+
+		<div class="result">
+		</div>
+	</body>
+
+
+	<script>
+
+
+	$("#aaa").click(function() {
+		orig="http://WWW.franciscoribeiro.net/localidades.html";
+
+		$.get(orig, function(data){
+			$(".result").html(data);
+		});
+	});
+
+</script>
+</html>
