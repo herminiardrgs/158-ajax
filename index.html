@@ -4,6 +4,7 @@
 
 
 		<button name="aaa" value="clica aqui" id="aaa"></button>
+		<button name="bbb" value="clica aqui" id="bbb">json</button>
 
 		<div class="result">
 		</div>
@@ -20,6 +21,19 @@
 			$(".result").html(data);
 		});
 	});
+
+
+	$("#bbb").click(function(){
+		$.getJSON("http://WWW.franciscoribeiro.net/loc.json",function(data){
+			$.each(data,function( key,val){
+				$(".resultjson").append('<h1>'+ key +'::'+ val +'</h1>');
+
+			});
+		});
+	});
+
+
+
 
 </script>
 </html>
