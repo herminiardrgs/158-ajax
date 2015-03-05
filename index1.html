@@ -1,0 +1,31 @@
+<html>
+
+<head>
+	<script src="jquery.js"></script>
+</head>
+	<body id="">
+
+
+		<button name="aaa" value="clica aqui" id="aaa"></button>
+		<button name="bbb" value="clica aqui" id="bbb">json</button>
+		<button name="btpessoa" id="btpessoa">pessoa</button>
+
+
+		<div class="result">
+		</div>
+
+		<div class="resultjson">
+		</div>
+	</body>
+<script type="text/javascript">
+
+	$("#btpessoa").click(function(){
+		servidor="http://WWW.franciscoribeiro.net/";
+		$.getJSON(servidor +"pessoa1.json", function(data){
+			$("body").append('<div>nome:'+data['nome']+'</div>');
+			$("body").append('<div>nac:'+data['nacionalidade']+'</div>');
+		});
+	});
+</script>
+
+</html>
